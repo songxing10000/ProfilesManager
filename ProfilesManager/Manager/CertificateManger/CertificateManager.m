@@ -13,7 +13,7 @@
 + (NSDictionary*)readCertificateInfo:(NSData *)certificateData{
     static NSString *const devCertSummaryKey = @"summary";
     static NSString *const devCertInvalidityDateKey = @"invalidity";
-    static NSString *const devCertInvalidityOrgKey = @"organization";
+    __unused static NSString *const devCertInvalidityOrgKey = @"organization";
 
     NSMutableDictionary *detailsDict = [NSMutableDictionary dictionary];
     SecCertificateRef certificateRef = SecCertificateCreateWithData(NULL, (__bridge CFDataRef)certificateData);

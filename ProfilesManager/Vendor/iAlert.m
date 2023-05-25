@@ -75,7 +75,7 @@
 }
 -(void)show{
     NSRect frame = NSMakeRect(0, 0, 200, 100);
-    NSUInteger styleMask =    NSBorderlessWindowMask;
+    NSUInteger styleMask =    NSWindowStyleMaskBorderless;
 //    NSRect rect = [NSWindow contentRectForFrameRect:frame styleMask:styleMask];
     NSWindow * window =  [[NSWindow alloc] initWithContentRect:frame styleMask:styleMask backing: NSBackingStoreBuffered defer:false];
     [window setBackgroundColor:[NSColor clearColor]];

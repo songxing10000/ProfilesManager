@@ -490,7 +490,7 @@ static NSString *kColumnIdentifierCreateDays = @"days";
     
     [savePanel beginSheetModalForWindow:self.view.window completionHandler:^(NSInteger result) {
         NSString *savePath = savePanel.URL.path;
-        if (result == NSFileHandlingPanelOKButton) {
+        if (result == NSModalResponseOK) {
             if ([[NSFileManager defaultManager] fileExistsAtPath:savePath]) {
                 [[NSFileManager defaultManager] removeItemAtPath:savePath error:nil];
             }
